@@ -1,97 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flowers For Sale!</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?
     family=Poppins:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
-    <link href="tailwind.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
+      rel="stylesheet"
+    />
+    <link href="tailwind.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
     <div class="header">
-    <div class="container">
+      <div class="container">
         <div class="navbar">
-         <div class="logo">
-                <img src="images\types-of-flowers-3.jpg" width="125px">
+          <div class="logo">
+            <img src="images\types-of-flowers-3.jpg" width="125px" />
+          </div>
+          <nav>
+            <ul id="menuitems">
+              <li><a href="products.html">Products</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <a href="checkout.html"
+            ><img src="images\cart.png" width="30px" height="30px"
+          /></a>
+          <img src="images\menu.png" class="menu-icon" onclick="menutoggle()" />
         </div>
-        <nav>
-             <ul id="menuitems">
-                 <li><a href="products.html">Products</a></li>
-                 <li><a href="about.html">About</a></li>
-                 <li><a href="contact.html">Contact</a></li>
-             </ul>
-        </nav>
-        <a href="checkout.html"><img src="images\cart.png" width="30px" height="30px"></a>
-        <img src="images\menu.png" class="menu-icon" onclick="menutoggle()">
-     </div>
-     <div class="row">
-         <div class="col-2">
-            <h1>Buy some homemade<br>Flowers</h1>
+        <div class="row">
+          <div class="col-2">
+            <h1>Buy some homemade<br />Flowers</h1>
             <p>Flowers are grown from home</p>
             <a href="checkout.html" class="btn">&#8594; Buy Now</a>
-         </div>
-         <div class="col-2 img">
-            <img src="images\download.jpg" width="500px">
-         </div>
-     </div>
-    </div>  
-</div>
-
-<!-------- featured categories -------->
-    <div class="catagories">
-        <div class="small-container">
-                <div class="row">
-                    <div class="col-3">
-                        <img src ="images\1280-473763156-amaryllis-flowers.jpg">
-                    </div>
-                    <div class="col-3">
-                        <img src ="images\1280-92079753-colorful-tulip.jpg">
-                    </div>
-                    <div class="col-3">
-                        <img src ="images\1280-489211728-beautiful-colorful-chrysanthemum-flower.jpg">
-                    </div>
-                 </div>
-            </div>
-            
-    </div>
-<!-------- featured products -------->
-    <div class="small-container">
-        <h2 class="title">Featured Product</h2>
-        <div class="row">
-            <div class="col-4">
-                    <a href="checkout.html" class="imgbtn"><img src="images\11May28-A-327.jpg" width="300px"></a>    
-                <h4>Bundle of Flowers</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-                <p>€10.00</p>
-            </div>
+          </div>
+          <div class="col-2 img">
+            <img src="images\download.jpg" width="500px" />
+          </div>
         </div>
+      </div>
     </div>
-<!-------- js for toggling menu -------->
+
+    <!-------- featured categories -------->
+    <div class="catagories">
+      <div class="small-container">
+        <div class="row">
+          <div class="col-3">
+            <img src="images\1280-473763156-amaryllis-flowers.jpg" />
+          </div>
+          <div class="col-3">
+            <img src="images\1280-92079753-colorful-tulip.jpg" />
+          </div>
+          <div class="col-3">
+            <img
+              src="images\1280-489211728-beautiful-colorful-chrysanthemum-flower.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------- featured products -------->
+    <div class="small-container">
+      <h2 class="title">Featured Product</h2>
+      <div class="row">
+        <div class="col-4">
+          <a href="checkout.html" class="imgbtn"
+            ><img src="images\11May28-A-327.jpg" width="300px"
+          /></a>
+          <h4>Bundle of Flowers</h4>
+          <div class="rating">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+          <p>€10.00</p>
+        </div>
+      </div>
+    </div>
+    <!-------- js for toggling menu -------->
     <script>
-        var menuitems = document.getElementById("menuitems");
+      var menuitems = document.getElementById("menuitems");
 
-        menuitems.style.maxHeight = "0px";
+      menuitems.style.maxHeight = "0px";
 
-        function menutoggle(){
-            if(menuitems.style.maxHeight == "0px")
-            {
-                menuitems.style.maxHeight = "200px";
-            }
-            else
-            {
-                menuitems.style.maxHeight = "0px";
-            }
+      function menutoggle() {
+        if (menuitems.style.maxHeight == "0px") {
+          menuitems.style.maxHeight = "200px";
+        } else {
+          menuitems.style.maxHeight = "0px";
         }
+      }
     </script>
-</body>
+  </body>
 </html>
