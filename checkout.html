@@ -4,7 +4,19 @@
   <link href="tailwind.css" rel="stylesheet">
     <!-- <script type="module" src="https://cdn.skypack.dev/twind/shim"></script> -->
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Flower Test Ecommerce website</title>
+
+    <script>
+      function getdll(ev){
+        if(ev){
+     
+        document.getElementById("imgPlaceholder").src=`images/${ev}.jpg`
+        }
+      }
+     </script>
+
 </head>
 <body>
     <header class="text-gray-400 bg-gray-900 body-font">
@@ -22,7 +34,7 @@
 <section class="text-gray-400 bg-gray-900 body-font overflow-hidden">
     <div class="container px-5 py-24 mx-auto">
       <div class="lg:w-4/5 mx-auto flex flex-wrap">
-        <img alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="images\11May28-A-327.jpg">
+        <img id="imgPlaceholder" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="images/tulip.jpg" alt="">
         <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h2 class="text-sm title-font text-gray-500 tracking-widest">Wonjons Flower</h2>
           <h1 class="text-gray-400 bg-gray-900 text-3xl title-font font-medium mb-1">Homegrown Flower Bouque</h1>
@@ -64,24 +76,28 @@
             </span>
           </div>
           <p class="leading-relaxed">A bundle of flowers, seasonly grown flowers raised with love!</p>
-          <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-            <div class="flex ml-6 items-center">
-              <span class="mr-3">Type</span>
-              <div class="relative">
-                  <select class="rounded border border-gray-700 focus:ring-2 focus:ring-purple-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-purple-500 text-purple-600 pl-3 pr-10">
-                  <option>Type 1</option>
-                  <option>Type 2</option>
-                  <option>Type 3</option>
-                  <option>Type 4</option>
-                </select>
-                <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
-                    <path d="M6 9l6 6 6-6"></path>
-                  </svg>
-                </span>
-              </div>
-            </div>
-          </div>
+  <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
+    <div class="flex ml-6 items-center">
+      <span class="mr-3">Type</span>
+      <div class="relative">
+        <form name="formid">
+          <select name="dllselect" onChange="getdll(this.value)" class="rounded border border-gray-700 focus:ring-2 focus:ring-purple-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-purple-500 text-purple-600 pl-3 pr-10">
+          <option value="1280-92079753-colorful-tulip">tulip</option>
+          <option value="1280-473763156-amaryllis-flowers">amaryllis</option>
+          <option value="280-489211728-beautiful-colorful-chrysanthemum-flower">chrysanthemum</option>
+          <option value="1280-503614506-mallow-flower">mallow</option>
+          <option value="dahlia-type">dahlia</option>
+        </select>
+      </form>
+        <label id="lblmess"></label>
+        <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </span>
+      </div>
+    </div>
+  </div>
           <div class="flex">
             <body>$10</body>
             <button class="flex ml-auto text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded">Button</button>
