@@ -30,16 +30,15 @@
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
-          <a href="checkout.html"
+          <a href="productlist.html"
             ><img src="images\cart.png" width="30px" height="30px"
           /></a>
           <img src="images\menu.png" class="menu-icon" onclick="menutoggle()" />
         </div>
         <div class="row">
           <div class="col-2">
-            <h1>Buy some homemade<br />Flowers</h1>
-            <p>Flowers are grown from home</p>
-            <a href="checkout.html" class="btn">&#8594; Buy Now</a>
+            <h1>Buy Beautiful<br/>Flower Bouquets</h1>
+            <a href="productlist.html" class="btn">&#8594; Buy Now</a>
           </div>
           <div class="col-2 img">
             <img class="border-indigo-500 border-4 filter drop-shadow-2xl shadow-2x1" src="images\download.jpg" width="500px" />
@@ -52,6 +51,19 @@
 
    
     <section class="text-gray-600 body-font">
+      <div class="flex justify-center">
+        <svg
+          class="animate-bounce w-6 h-6 text-amber-900"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </div>
       <div class="container px-5 py-24 mx-auto">
         <div class="flex flex-wrap -m-4">
           <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
@@ -165,6 +177,28 @@
         </div>
       </div>
     </div>
+
+    <footer class="text-gray-400">
+      <div class="border-red-500 border-4 bg-white">
+        <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+          <p class="text-gray-400 text-sm text-center sm:text-left">© 2021 FlowerDelights —
+            <a href="https://www.instagram.com/wonhealy2020/" rel="noopener noreferrer" class="text-gray-500 ml-1" target="_blank">@Wonjon</a>
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+            <a class="ml-3 text-gray-400">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+    </footer>
+    
+    
+  </body>
+  </html>
+    
     <!-------- js for toggling menu -------->
     <script>
       var menuitems = document.getElementById("menuitems");
