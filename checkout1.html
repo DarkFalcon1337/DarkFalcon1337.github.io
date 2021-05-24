@@ -10,14 +10,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beautiful Flower Boquets For Sale Now!</title>
 
+
     <script>
-      function getdll(ev){
-        if(ev){
-     
-        document.getElementById("priceamount").span=`images/${ev}.jpg`
-        }
-      }
-     </script>
+      function getSelectValue() 
+      {
+        var selectedValue = document.getElementById("selection").value;
+   
+   
+         function multiplyNumbers(x, y) {
+           return x * y;
+         }
+         var z = multiplyNumbers(selectedValue, 50);
+         document.getElementById("multiplication").innerText=`€${z}`;
+       }   
+      </script>
 
 </head>
 
@@ -56,22 +62,23 @@
         <div class="flex border-t border-gray-200 py-2">
         </div>
         <div class="flex">
-          <span id="priceamount" class="title-font font-medium text-2xl text-indigo-500">€50.00</span>
+          <span id="multiplication" class="title-font font-medium text-2xl text-indigo-500">€50.00</span>
           <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Buy Now</button>
         </div>
         <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
           <div class="flex ml-6 items-center">
-            <span class="mr-3">Amount</span>
+            <span class="mr-3">Quantity</span>
             <div class="relative">
               <form name="formid">
-                <select name="dllselect" onChange="getdll(this.value)" class="rounded border border-gray-700 focus:ring-2 focus:ring-purple-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-purple-500 text-purple-600 pl-3 pr-10">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </form>
+                <select name="dllselect" id="selection" onchange="getSelectValue();" onChange="document.getElementById('multiplication').innerHTML=z" class="rounded border border-gray-700 focus:ring-2 focus:ring-purple-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-purple-500 text-purple-600 pl-3 pr-10">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </form>
+    
               <label id="lblmess"></label>
               <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
