@@ -19,7 +19,7 @@
          function multiplyNumbers(x, y) {
            return x * y;
          }
-         var z = multiplyNumbers(selectedValue, 60);
+         var z = multiplyNumbers(selectedValue, PLACEHOLDER);
          document.getElementById("multiplication").innerText=`€${z}`;
        }   
       </script>
@@ -59,9 +59,9 @@
         <br>
         <div class="flex border-t border-gray-200 py-2">
         </div>
-    <div id="paypal-button" class="flex">
-      <span id="multiplication" class="title-font font-medium text-2xl text-indigo-500">€60.00</span>
-      <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Buy Now</button>
+    <div class="flex">
+      <span id="multiplication" class="title-font font-medium text-2xl text-indigo-500">€PLACEHOLDER</span>
+      <div id="paypal-button" class="flex ml-auto text-white py-2 px-6"></div>
     </div>
     <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
       <div class="flex ml-6 items-center">
@@ -90,6 +90,36 @@
       <img alt="ecommerce" class="border-8 border-red-500 lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="boquets\WhatsApp Image 2021-05-24 at 18.14.49.jpeg">
     </div>
   </div>
+  <script
+  src="https://www.paypal.com/sdk/js?client-id=Aef0RRrfP2RC9fKwHhSvGvk2MaA6xHMN2gHAuig9xCcwQG20n5Ic3tUYq89TpdDhOb0A5Y9K7jggXIb2&disable-funding=credit,card">
+  </script>
+<script>
+  paypal.Buttons({
+    style : {
+        color: 'blue',
+        shape: 'pill',
+        label: 'buynow'
+    },
+    createOrder: function(data, actions) {
+            return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '0.01'
+          }
+        }]
+      });
+    },
+    onApprove: function (data, actions) {
+        return actions.order.capture().then(function (details) {
+            console.log(details)
+            window.location.replace("paymentsuccess.html")
+        })
+    },
+    onCancel: function (data) {
+        window.location.replace("paymentfailed.html")
+    }
+  }).render('#paypal-button');
+</script>
 </section>
 
 
