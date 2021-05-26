@@ -224,11 +224,11 @@
             onApprove: function (data, actions) {
               return actions.order.capture().then(function (details) {
                 console.log(details);
-                window.location.replace("paymentsuccess.html");
+                window.location.replace("https://darkfalcon1337.github.io/paymentsuccess.html");
               });
             },
             onCancel: function (data) {
-              window.location.replace("paymentfailed.html");
+              window.location.replace("https://darkfalcon1337.github.io/paymentfailed.html");
             },
           })
           .render("#paypal-button");
