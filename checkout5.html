@@ -210,7 +210,7 @@
             },
             createOrder: function (data, actions) {
               var selectedValue = document.getElementById("selection").value;
-              var z = multiplyNumbers(selectedValue, PLACEHOLDER);
+              var z = multiplyNumbers(selectedValue, 55);
               return actions.order.create({
                 purchase_units: [
                   {
