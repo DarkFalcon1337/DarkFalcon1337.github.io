@@ -1,117 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-<head>
-  <link href="tailwind.css" rel="stylesheet">
+  <head>
+    <link href="tailwind.css" rel="stylesheet" />
     <!-- <script type="module" src="https://cdn.skypack.dev/twind/shim"></script> -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Beautiful Flower Boquets For Sale Now!</title>
 
     <script>
-      function getSelectValue() 
-      {
+      function multiplyNumbers(x, y) {
+        return x * y;
+      }
+      function getSelectValue() {
         var selectedValue = document.getElementById("selection").value;
-   
-   
-         function multiplyNumbers(x, y) {
-           return x * y;
-         }
-         var z = multiplyNumbers(selectedValue, PLACEHOLDER);
-         document.getElementById("multiplication").innerText=`€${z}`;
-       }   
-      </script>
 
+        var z = multiplyNumbers(selectedValue, PLACEHOLDER);
+        document.getElementById("multiplication").innerText = `€${z}`;
+      }
+    </script>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=Aef0RRrfP2RC9fKwHhSvGvk2MaA6xHMN2gHAuig9xCcwQG20n5Ic3tUYq89TpdDhOb0A5Y9K7jggXIb2&disable-funding=credit,card"></script>
   </head>
 
-
-<body class="bg-gray-900">
+  <body class="bg-gray-900">
     <header class="text-gray-400 bg-gray-900 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-          </a>
-          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-            <a href="index.html" class="mr-5 hover:text-purple-400">Home</a>
-            <a href="products.html" class="mr-5 hover:text-purple-400">Products</a>
-            <a href="about.html" class="mr-5 hover:text-purple-400">About</a>
-            <a href="contact.html" class="mr-5 hover:text-purple-400">Contact</a>
-            <a href="productlist.html"><img src="images\cart.png" width="30px" height="30px"></a>
+      <div
+        class="
+          container
+          mx-auto
+          flex flex-wrap
+          p-5
+          flex-col
+          md:flex-row
+          items-center
+        "
+      >
+        <a
+          class="
+            flex
+            title-font
+            font-medium
+            items-center
+            text-gray-900
+            mb-4
+            md:mb-0
+          "
+        >
+        </a>
+        <nav
+          class="
+            md:ml-auto
+            md:mr-auto
+            flex flex-wrap
+            items-center
+            text-base
+            justify-center
+          "
+        >
+          <a href="index.html" class="mr-5 hover:text-purple-400">Home</a>
+          <a href="products.html" class="mr-5 hover:text-purple-400"
+            >Products</a
+          >
+          <a href="about.html" class="mr-5 hover:text-purple-400">About</a>
+          <a href="contact.html" class="mr-5 hover:text-purple-400">Contact</a>
+          <a href="productlist.html"
+            ><img src="images\cart.png" width="30px" height="30px"
+          /></a>
+        </nav>
+      </div>
+    </header>
 
-          </nav>
-        </div>
-      </header>
+    <section class="text-white body-font overflow-hidden">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="lg:w-4/5 mx-auto flex flex-wrap">
+          <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+            <h2 class="text-sm title-font text-gray-500 tracking-widest">
+              FlowerDelights
+            </h2>
+            <h1 class="text-white text-3xl title-font font-medium mb-4">
+              Pinky
+            </h1>
+            <div class="flex mb-4">
+              <a
+                class="
+                  flex-grow
+                  text-indigo-500
+                  border-b-2 border-indigo-500
+                  py-2
+                  text-lg
+                  px-1
+                "
+                >Description</a
+              >
+            </div>
+            <p class="leading-relaxed mb-4">
+              A delightful gift of lemon and pink blooms with a hint of lilac
+              including roses and gerberas.
+            </p>
+            <li>Aqua Packed, this Bouquet is delivered in water.</li>
+            <li>Picture shows standard size option</li>
+            <br />
+            <div class="flex border-t border-gray-200 py-2"></div>
+            <div class="flex">
+              <span
+                id="multiplication"
+                class="title-font font-medium text-2xl text-indigo-500"
+                >€PLACEHOLDER</span
+              >
+              <div
+                id="paypal-button"
+                class="flex ml-auto text-white py-2 px-6"
+              ></div>
+            </div>
+            <div
+              class="
+                flex
+                mt-6
+                items-center
+                pb-5
+                border-b-2 border-gray-100
+                mb-5
+              "
+            >
+              <div class="flex ml-6 items-center">
+                <span class="mr-3">Quantity</span>
+                <div class="relative">
+                  <form name="formid">
+                    <select
+                      name="dllselect"
+                      id="selection"
+                      onchange="getSelectValue();"
+                      onChange="document.getElementById('multiplication').innerHTML=z"
+                      class="
+                        rounded
+                        border border-gray-700
+                        focus:ring-2 focus:ring-purple-900
+                        bg-transparent
+                        appearance-none
+                        py-2
+                        focus:outline-none
+                        focus:border-purple-500
+                        text-purple-600
+                        pl-3
+                        pr-10
+                      "
+                    >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </form>
 
-
-<body class="bg-gray-900">
-<section class="text-white body-font overflow-hidden">
-  <div class="container px-5 py-24 mx-auto">
-    <div class="lg:w-4/5 mx-auto flex flex-wrap">
-      <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
-        <h2 class="text-sm title-font text-gray-500 tracking-widest">FlowerDelights</h2>
-        <h1 class="text-white text-3xl title-font font-medium mb-4">Pinky</h1>
-        <div class="flex mb-4">
-          <a class="flex-grow text-indigo-500 border-b-2 border-indigo-500 py-2 text-lg px-1">Description</a>
-        </div>
-        <p class="leading-relaxed mb-4">A delightful gift of lemon and pink blooms with a hint of lilac including roses and gerberas.</p>
-        <li>Aqua Packed, this Bouquet is delivered in water.</li>
-        <li>Picture shows standard size option</li>
-        <br>
-        <div class="flex border-t border-gray-200 py-2">
-        </div>
-        <div class="flex">
-          <span id="multiplication" class="title-font font-medium text-2xl text-indigo-500">€PLACEHOLDER</span>
-          <button class="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Buy Now</button>
-        </div>
-        <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5">
-          <div class="flex ml-6 items-center">
-            <span class="mr-3">Quantity</span>
-            <div class="relative">
-              <form name="formid">
-                <select name="dllselect" id="selection" onchange="getSelectValue();" onChange="document.getElementById('multiplication').innerHTML=z" class="rounded border border-gray-700 focus:ring-2 focus:ring-purple-900 bg-transparent appearance-none py-2 focus:outline-none focus:border-purple-500 text-purple-600 pl-3 pr-10">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                </select>
-              </form>
-    
-              <label id="lblmess"></label>
-              <span class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4" viewBox="0 0 24 24">
-                  <path d="M6 9l6 6 6-6"></path>
-                </svg>
-              </span>
+                  <label id="lblmess"></label>
+                  <span
+                    class="
+                      absolute
+                      right-0
+                      top-0
+                      h-full
+                      w-10
+                      text-center text-gray-600
+                      pointer-events-none
+                      flex
+                      items-center
+                      justify-center
+                    "
+                  >
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      class="w-4 h-4"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M6 9l6 6 6-6"></path>
+                    </svg>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
+          <img
+            alt="ecommerce"
+            class="
+              border-8 border-red-500
+              lg:w-1/2
+              w-full
+              lg:h-auto
+              h-64
+              object-cover object-center
+              rounded
+            "
+            src="boquets\WhatsApp Image 2021-05-24 at 18.12.13.jpeg"
+          />
         </div>
       </div>
-      <img alt="ecommerce" class="border-8 border-red-500 lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="boquets\WhatsApp Image 2021-05-24 at 18.12.13.jpeg">
-    </div>
-  </div>
-</section>
-</body>
+      <script>
+        paypal
+          .Buttons({
+            style: {
+              color: "blue",
+              shape: "pill",
+              label: "buynow",
+            },
+            createOrder: function (data, actions) {
+              var selectedValue = document.getElementById("selection").value;
+              var z = multiplyNumbers(selectedValue, PLACEHOLDER);
+              return actions.order.create({
+                purchase_units: [
+                  {
+                    amount: {
+                      value: z,
+                    },
+                  },
+                ],
+              });
+            },
+            onApprove: function (data, actions) {
+              return actions.order.capture().then(function (details) {
+                console.log(details);
+                window.location.replace("paymentsuccess.html");
+              });
+            },
+            onCancel: function (data) {
+              window.location.replace("paymentfailed.html");
+            },
+          })
+          .render("#paypal-button");
+      </script>
+    </section>
 
-
-<footer class="text-gray-400 bg-gray-900">
-  <div class="bg-gray-900">
-    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-      <p class="text-gray-400 text-sm text-center sm:text-left">© 2021 FlowerDelights —
-        <a href="https://www.instagram.com/wonhealy2020/" rel="noopener noreferrer" class="text-gray-500 ml-1" target="_blank">@Wonjeong</a>
-      </p>
-      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-        <a class="ml-3 text-gray-400">
-          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-          </svg>
-        </a>
-      </span>
-    </div>
-</footer>
-
-
-</body>
+    <footer class="text-gray-400 bg-gray-900">
+      <div class="bg-gray-900">
+        <div
+          class="
+            container
+            mx-auto
+            py-4
+            px-5
+            flex flex-wrap flex-col
+            sm:flex-row
+          "
+        >
+          <p class="text-gray-400 text-sm text-center sm:text-left">
+            © 2021 FlowerDelights —
+            <a
+              href="https://www.instagram.com/wonhealy2020/"
+              rel="noopener noreferrer"
+              class="text-gray-500 ml-1"
+              target="_blank"
+              >@Wonjeong</a
+            >
+          </p>
+          <span
+            class="
+              inline-flex
+              sm:ml-auto
+              sm:mt-0
+              mt-2
+              justify-center
+              sm:justify-start
+            "
+          >
+            <a class="ml-3 text-gray-400">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"
+                ></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
